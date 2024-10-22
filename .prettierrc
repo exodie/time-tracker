@@ -9,6 +9,7 @@
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "importOrder": [
     "^react",
+    "^react-dom",
     "^../(.*)$",
     "^<THIRD_PARTY_MODULES>",
     "^@/views/*",

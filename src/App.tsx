@@ -1,10 +1,11 @@
 import { Button } from './shared/ui'
+import { RootLayout } from './widgets'
 
 const App = () => {
   return (
-    <div>
+    <RootLayout>
       <Button>button</Button>
-    </div>
+    </RootLayout>
   )
 }
 

@@ -1,3 +1,5 @@
 export * from './button'
 export * from './dropdown-menu'
 export * from './mode-toggle'
+export * from './dialog'
+export * from './input'

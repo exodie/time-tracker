@@ -7,7 +7,7 @@ import { Button } from '@/shared/ui'
 
 export const Header = () => {
   return (
-    <header className="fixed top-0 flex flex-row items-center justify-between w-full space-x-2 p-4">
+    <header className="sticky top-0 flex flex-row items-center justify-between w-full space-x-2 p-4">
       <Link to={'/'}>
         <h1 className="font-medium font-mono text-2xl">Tracker</h1>
       </Link>

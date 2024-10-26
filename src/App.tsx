@@ -1,10 +1,11 @@
-import { Button } from './shared/ui'
 import { RootLayout } from './widgets'
+
+import { Outlet } from 'react-router-dom'
 
 const App = () => {
   return (
     <RootLayout>
-      <Button>button</Button>
+      <Outlet />
     </RootLayout>
   )
 }

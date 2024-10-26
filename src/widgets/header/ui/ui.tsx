@@ -1,5 +1,4 @@
 import { HeaderSettingsDialog } from './settings'
-import { Settings } from 'lucide-react'
 
 import { Link } from 'react-router-dom'
 

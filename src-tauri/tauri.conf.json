@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "Трекинг",
+        "title": "Tracker",
         "width": 1440,
         "height": 1024,
         "center": true,

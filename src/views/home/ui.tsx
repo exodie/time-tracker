@@ -1,3 +1,5 @@
+import { Projects } from '@/widgets'
+
 export const HomeView = () => {
-  return <div>home</div>
+  return <Projects />
 }

@@ -1,5 +1,3 @@
-import { HeaderSettingsDialog } from './settings'
-
 import { Link } from 'react-router-dom'
 
 import { Button } from '@/shared/ui'
@@ -16,10 +14,6 @@ export const Header = () => {
           <Link to={'/auth/signin'}>
             <Button>Sign In</Button>
           </Link>
-        </li>
-
-        <li>
-          <HeaderSettingsDialog />
         </li>
       </ul>
     </header>

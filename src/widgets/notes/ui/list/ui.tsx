@@ -1,11 +1,9 @@
 import { mockNotes } from './mocks'
-import { EyeIcon, PenLineIcon, PlusIcon } from 'lucide-react'
-
-import { Link } from 'react-router-dom'
+import { PenLineIcon, PlusIcon } from 'lucide-react'
 
 import { Button } from '@/shared/ui'
 
-export const ProjectList = () => {
+export const NotesList = () => {
   return (
     <ul className="flex flex-col gap-y-2">
       {mockNotes.map(({ title, description, notesValue, hoursValue }, index) => (
@@ -18,16 +16,12 @@ export const ProjectList = () => {
             <p className="font-light text-lg text-foreground/70">{description}</p>
           </div>
 
-          <div className="flex flex-row items-center gap-x-2">
-            <div className="flex flex-col mr-2">
+          <div className="flex flex-row items-center gap-x-4">
+            <div className="flex flex-col">
               <span className="font-mono text-lg">Notes: {notesValue}</span>
               <span className="font-mono text-lg">Hours: {hoursValue}</span>
             </div>
-            <Link to={`/notes/${title.toLowerCase()}`}>
-              <Button className="gap-x-1">
-                Open <EyeIcon size={28} />
-              </Button>
-            </Link>
+
             <Button className="gap-x-1">
               Edit <PenLineIcon />
             </Button>

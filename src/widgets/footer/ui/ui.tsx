@@ -7,7 +7,7 @@ import { ModeToggle } from '@/shared/ui'
 
 export const Footer = () => {
   return (
-    <footer className="fixed bottom-0 flex flex-row items-center justify-between w-full space-x-2 p-4">
+    <footer className="fixed bottom-0 flex flex-row items-center justify-between w-full space-x-2 p-4 bg-background">
       <Link
         to={'https://github.com/exodie/time-tracker'}
         target="_blank"

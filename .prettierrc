@@ -10,12 +10,16 @@
   "importOrder": [
     "^react",
     "^react-dom",
+    "^ky",
     "^../(.*)$",
-    "^<THIRD_PARTY_MODULES>",
     "^@/views/*",
     "^@/widgets/*",
+    "^@/api/*",
     "^@/shared/*",
-    "^@/shared/ui/*"
+    "^@/shared/ui/*",
+    "^@/types/*",
+    "^@/constants/*",
+    "^<THIRD_PARTY_MODULES>"
   ],
   "importOrderSeparation": true
 }

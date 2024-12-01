@@ -1,5 +1,5 @@
-import { Projects } from '@/widgets'
+import { ProjectsWidget } from '@/widgets'
 
 export const HomeView = () => {
-  return <Projects />
+  return <ProjectsWidget />
 }

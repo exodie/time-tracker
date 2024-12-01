@@ -1,34 +1,34 @@
-import { mockNotes } from './mocks'
-import { PenLineIcon, PlusIcon } from 'lucide-react'
+import { FC } from 'react'
 
-import { Button } from '@/shared/ui'
+import { UpdateNotionDialog } from '../edit-dialog'
 
-export const NotesList = () => {
+import type{ Notions } from '@/types/projects'
+import { DeleteNotionDialog } from '../delete-dialog'
+
+type Props = {
+  projectId: string
+  notions: Notions[]
+}
+
+export const NotesList: FC<Props> = ({ projectId, notions }) => {
   return (
     <ul className="flex flex-col gap-y-2">
-      {mockNotes.map(({ title, description, notesValue, hoursValue }, index) => (
+      {notions.map(({ ID, name, description }, index) => (
         <li
           key={index}
           className="flex flex-row items-center justify-between px-2 py-4 border border-foreground rounded-lg"
         >
           <div className="flex flex-col gap-y-2">
-            <h3 className="font-medium text-xl">{title}</h3>
-            <p className="font-light text-lg text-foreground/70">{description}</p>
+            <h3 className="font-medium text-xl">{name}</h3>
+            <p className="font-light text-lg text-foreground/70">
+              {description ?? 'Отсутсвует'}
+            </p>
           </div>
 
           <div className="flex flex-row items-center gap-x-2">
-            <div className="flex flex-col">
-              <span className="font-mono text-lg">Notes: {notesValue}</span>
-              <span className="font-mono text-lg">Hours: {hoursValue}</span>
-            </div>
-
             <div className="flex space-x-1">
-              <Button className="gap-x-1">
-                Edit <PenLineIcon />
-              </Button>
-              <Button className="gap-x-1">
-                Add <PlusIcon />
-              </Button>
+              <UpdateNotionDialog projectId={projectId} notionId={ID} />
+              <DeleteNotionDialog projectId={projectId} notionId={ID} />
             </div>
           </div>
         </li>

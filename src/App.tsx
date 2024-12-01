@@ -1,12 +1,15 @@
 import { RootLayout } from './widgets'
 
+import { CookiesProvider } from 'react-cookie'
 import { Outlet } from 'react-router-dom'
 
 const App = () => {
   return (
-    <RootLayout>
-      <Outlet />
-    </RootLayout>
+    <CookiesProvider>
+      <RootLayout>
+        <Outlet />
+      </RootLayout>
+    </CookiesProvider>
   )
 }
 
